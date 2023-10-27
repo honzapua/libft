@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:57:49 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/27 16:02:40 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/27 16:48:59 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int	ft_isalpha(char ch)
 		return (0);
 }
 
+/*
 int	main(void)
 {
 	char	str1;
@@ -87,12 +88,24 @@ int	main(void)
 	printf("str5: %c is alphabetic character only: %d \n", str5, ft_isalpha(str5));
 
 	char c;
-
+	c = 'Q';
+	printf("\nResult when uppercase alphabet is passed: %d", isalpha(c));
+	
+	c = 'q';
+	printf("\nResult when lowercase alphabet is passed: %d", isalpha(c));
+	
+	c='+';
+	printf("\nResult when non-alphabetic character is passed: %d", isalpha(c));
+	
+	//next example
+	
 	printf("Enter a character: ");
 	scanf("%c", &c);
 	if (ft_isalpha(c) == 0)
 		printf("%c is not an alphabet.", c);
 	else
 		printf("%c is an alphabet.", c);
+	
 	return (0);
 }
+*/

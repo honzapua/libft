@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:55:20 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/26 19:10:50 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:01:11 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 isalnum()
 checks for an alphanumeric character; it is equivalent to (isalpha(c) || isdigit(c))
 
-
+C isalnum()
 The function definition of isalnum() is:
 
 int isalnum(int argument);
@@ -25,18 +25,50 @@ argument - a character
 isalnum() Return Value
 Returns 1 if argument is an alphanumeric character.
 Returns 0 if argument is neither an alphabet nor a digit.
-
 */
 
-#include "ft_isalpha.c"
-#include "ft_isdigit.c"
+#include "ft_isalpha.c"	//not allowed in 42
+#include "ft_isdigit.c"	//not allowed in 42
 #include <stdio.h>
 #include <unistd.h>
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);
 }
+/*
+int	main(void)
+{
+	char	c;
+	int	result;
+
+	c = '5';
+	result = ft_isalnum(c);
+	printf("When %c is passed, return value is %d\n", c, result);
+
+	c = 'Q';
+	result = ft_isalnum(c);
+	printf("When %c is passed, return value is %d\n", c, result);
+
+	c = 'l';
+	result = ft_isalnum(c);
+	printf("When %c is passed, return value is %d\n", c, result);
+
+	c = '+';
+	result = ft_isalnum(c);
+	printf("When %c is passed, return value is %d\n", c, result);
+
+	//next example
+	
+	printf("Enter a character: ");
+	scanf("%c", &c);
+	if (ft_isalnum(c) == 0)
+	printf("%c is not an alphanumeric character.", c);
+		else
+	printf("%c is an alphanumeric character.", c);
+	return (0);
+}
+*/

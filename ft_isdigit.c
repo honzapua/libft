@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:34:03 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/26 19:03:34 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/27 16:59:30 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,27 +40,18 @@ int	ft_isdigit(char d)
 		return (0);
 }
 
+/*
 int	main(void)
 {
-	char	str1;
-	char	str2;
-	char	str3;
-	char	str4;
-	char	str5;
-
-	str1 = '\0';
-	str2 = 'a';
-	str3 = 'Z';
-	str4 = '1';
-	str5 = (char) '8';
-
-	printf("str1: %c is alphabetic character only: %d \n", str1, ft_isdigit(str1));
-	printf("str2: %c is alphabetic character only: %d \n", str2, ft_isdigit(str2));
-	printf("str3: %c is alphabetic character only: %d \n", str3, ft_isdigit(str3));
-	printf("str4: %c is alphabetic character only: %d \n", str4, ft_isdigit(str4));
-	printf("str5: %c is alphabetic character only: %d \n", str5, ft_isdigit(str5));
-
 	char c;
+	
+	c='5';
+	printf("Result when numeric character is passed %c: %d ", c, ft_isdigit(c));
+
+	c='+';
+	printf("\nResult when non-numeric character is passed %c: %d \n", c, ft_isdigit(c));
+
+	//next example
 
 	printf("Enter a character: ");
 	scanf("%c",&c);
@@ -71,3 +62,4 @@ int	main(void)
 		printf("%c is a digit.",c);
 	return (0);
 }
+*/
