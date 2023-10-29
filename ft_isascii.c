@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:01:39 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/27 19:12:48 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/29 20:17:56 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,10 @@ checks whether c is a 7-bit unsigned char value that fits into the ASCII charact
 #include <stdio.h>
 #include <unistd.h>
 /*
-// int	ft_isascii(int ch)
-// {
-// 	if (ch >= 0 && ch <= 127)
-// 		return (1);
-// 	else
-// 		return (0);
-// }
+int	ft_isascii(int c)
+{
+	return (!(c & ~0x7f));
+}
 
 0x7f is 127 in decimal
 & is bitwise operator and
@@ -34,18 +31,22 @@ checks whether c is a 7-bit unsigned char value that fits into the ASCII charact
 ~ Binary One's Complement Operator is unary and has the effect of 'flipping' bits.
 	(~A ) = ~(60), i.e,. -0111101
 */
-int	ft_isascii(int c)
+int	ft_isascii(int ch)
 {
-	return (!(c & ~0x7f));
+	if (ch >= 0 && ch <= 127)
+		return (1);
+	else
+		return (0);
 }
-
 /*
 int	main(void)
 {
 	char	c;
 
 	// c = L'Á';
-	c = L'Á';
+	// hexadecimal esc character;
+	// c = '\x40';
+	c = '\xff';
 
 	if (ft_isascii(c) == 0)
 		printf("%c is not an ascii character.", c);
