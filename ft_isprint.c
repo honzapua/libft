@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 16:17:28 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/29 20:03:43 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:34:06 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,10 @@ ASCII printable characters are the 95 characters in the ASCII character set that
 
 https://opensource.apple.com/source/BerkeleyDB/BerkeleyDB-21/db/clib/isprint.c.auto.html
 */
-
-#include <stdio.h>
-#include <unistd.h>
-// #include <ctype.h>
-
 // int	ft_isprint(int ch)
 // {
 // 	return ((ch >= ' ' && ch <= '~') ? 1 : 0);
 // }
-
 int	ft_isprint(int ch)
 {
 	if (ch >= 20 && ch <= 126)
@@ -50,6 +44,11 @@ int	ft_isprint(int ch)
 	else
 		return (0);
 }
+
+/*
+#include <stdio.h>
+#include <unistd.h>
+#include <ctype.h>
 
 int	main(void)
 {
@@ -66,3 +65,4 @@ int	main(void)
 			printf("%c ", c);
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:57:49 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/27 16:48:59 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:36:28 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,6 @@ Return Value	Remarks
 Zero (0)	If the parameter isn't an alphabet.
 Non zero number	If the parameter is an alphabet.
 */
-
-#include <stdio.h>
-#include <unistd.h>
-
 int	ft_isupper(int ch)
 {
 	if (ch >= 'A' && ch <= 'Z')
@@ -67,6 +63,9 @@ int	ft_isalpha(char ch)
 }
 
 /*
+#include <stdio.h>
+#include <unistd.h>
+
 int	main(void)
 {
 	char	str1;

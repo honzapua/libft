@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 20:22:54 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/31 15:26:04 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:44:05 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,12 @@ DESCRIPTION
 
 RETURN VALUE
 	The converted value or 0 on error.
-*/
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
 
 Iterate through all characters of input string and update result (res)
 take ASCII character of corresponding digit and subtract the code from '0' to
 get numerical value and multiply res by 10 to shuffle digits left to update
 running total. Loop ends when reach string terminator '\0'
 
-/*
 1st while non printable characters
 2nd while sign resolve
 3rd composing number
@@ -71,6 +65,9 @@ int	ft_atoi(char *str)
 	return (nbr);
 }
 /*
+#include <stdio.h>
+#include <unistd.h>
+
 int	main(void)
 {
 	char	str[] = "+-+-4faljf";

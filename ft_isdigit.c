@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:34:03 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/27 16:59:30 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:35:24 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,6 @@ Return Value	Remarks
 Non-zero integer ( x > 0 )	Argument is a numeric character.
 Zero (0)	Argument is not a numeric character.
 */
-
-#include <stdio.h>
-#include <unistd.h>
-
 int	ft_isdigit(char d)
 {
 	if (d >= '0' && d <= '9')
@@ -41,6 +37,9 @@ int	ft_isdigit(char d)
 }
 
 /*
+#include <stdio.h>
+#include <unistd.h>
+
 int	main(void)
 {
 	char c;

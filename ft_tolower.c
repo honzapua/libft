@@ -6,12 +6,12 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 19:52:37 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/31 15:31:09 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:45:22 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- #include <ctype.h>
+#include <ctype.h>
 
 int toupper(int c);
 int tolower(int c);

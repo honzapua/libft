@@ -6,10 +6,12 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:55:20 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/29 16:54:25 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:45:05 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_isalpha.c"	//not allowed in 42
+#include "ft_isdigit.c"	//not allowed in 42
 /*
 isalnum()
 checks for an alphanumeric character; it is equivalent to (isalpha(c) || isdigit(c))
@@ -26,12 +28,6 @@ isalnum() Return Value
 Returns 1 if argument is an alphanumeric character.
 Returns 0 if argument is neither an alphabet nor a digit.
 */
-
-#include "ft_isalpha.c"	//not allowed in 42
-#include "ft_isdigit.c"	//not allowed in 42
-#include <stdio.h>
-#include <unistd.h>
-
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
@@ -40,6 +36,9 @@ int	ft_isalnum(int c)
 		return (0);
 }
 /*
+#include <stdio.h>
+#include <unistd.h>
+
 int	main(void)
 {
 	char	c;
