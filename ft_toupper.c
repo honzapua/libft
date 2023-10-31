@@ -6,12 +6,12 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:30:45 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/29 19:58:46 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:30:03 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- #include <ctype.h>
+#include <ctype.h>
 
 int toupper(int c);
 int tolower(int c);
@@ -35,10 +35,7 @@ The value returned is that of the converted letter, or c if the conver‐
 sion was not possible.
 */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "ft_isalpha.c"
-// #include <ctype.h>
 
 int	ft_toupper(int ch)
 {
@@ -47,6 +44,10 @@ int	ft_toupper(int ch)
 	return (ch);
 }
 /*
+#include <stdio.h>
+#include <unistd.h>
+#include <ctype.h>
+
 int	main(void)
 {
 	char	c;
