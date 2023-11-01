@@ -1,0 +1,7 @@
+
+remove include in:
+ft_lower.c
+#include "ft_isalpha.c" //not allowed in 42
+
+ft_upper.c
+#include "ft_isalpha.c" //not allowed in 42
