@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:56:29 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/02 19:16:46 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/06 19:36:55 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,30 @@ RETURN VALUE
 ATTRIBUTES
        For an  explanation  of  the  terms  used  in  this  section,  see  at‐
        tributes(7).
+
+https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
+Description
+The C library function void *memset(void *str, int c, size_t n) copies the character c (an unsigned char) to the first n characters of the string pointed to, by the argument str.
+
+Declaration
+Following is the declaration for memset() function.
+
+void *memset(void *str, int c, size_t n)
+Parameters
+str − This is a pointer to the block of memory to fill.
+
+c − This is the value to be set. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value.
+
+n − This is the number of bytes to be set to the value.
+
+Return Value
+This function returns a pointer to the memory area str.
+
 */
 
 #include <stdio.h>
+#include <string.h>
+
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
@@ -46,3 +67,23 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (pos);
 }
+/*
+int	main(void)
+{
+	char	str[50];
+
+	strcpy(str, "This is string.h library function");
+	puts(str);
+
+	memset(str, '$', 3);
+	puts(str);
+
+	strcpy(str, "This is ft_memset() part of libft library function");
+	puts(str);
+
+	ft_memset(str, '$', 3);
+	puts(str);
+
+	return (0);
+}
+*/
