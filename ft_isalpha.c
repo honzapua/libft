@@ -6,38 +6,10 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:57:49 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/31 15:36:28 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/09 18:50:00 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-isalpha()
-checks  for an alphabetic character; in the standard "C" locale,
-it is equivalent to (isupper(c) ||  islower(c)).   In  some  lo‐
-cales, there may be additional characters for which isalpha() is
-true—letters which are neither uppercase nor lowercase.
-
-C isalpha()
-In C programming, isalpha() function checks whether a character is an alphabet (a to z and A-Z) or not.
-
-If a character passed to isalpha() is an alphabet, it returns a non-zero integer, if not it returns 0.
-
-The isalpha() function is defined in <ctype.h> header file.
-
-C isalpha() Prototype
-int isalpha(int argument);
-Function isalpha() takes a single argument in the form of an integer and returns an integer value.
-
-Even though, isalpha() takes integer as an argument, character is passed to isalpha() function.
-
-
-Internally, the character is converted into the integer value corresponding to its ASCII value when passed.
-
-isalpha() Return Value
-Return Value	Remarks
-Zero (0)	If the parameter isn't an alphabet.
-Non zero number	If the parameter is an alphabet.
-*/
 int	ft_isupper(int ch)
 {
 	if (ch >= 'A' && ch <= 'Z')
@@ -54,17 +26,50 @@ int	ft_islower(int ch)
 		return (0);
 }
 
-int	ft_isalpha(char ch)
+/*
+isalpha()
+checks  for an alphabetic character; in the standard "C" locale,
+it is equivalent to (isupper(c) ||  islower(c)).   In  some  lo‐
+cales, there may be additional characters for which isalpha() is
+true—letters which are neither uppercase nor lowercase.
+
+C isalpha()
+In C programming, isalpha() function checks whether a character is an alphabet
+ (a to z and A-Z) or not.
+
+If a character passed to isalpha() is an alphabet, it returns a non-zero
+ integer, if not it returns 0.
+
+The isalpha() function is defined in <ctype.h> header file.
+
+C isalpha() Prototype
+int isalpha(int argument);
+Function isalpha() takes a single argument in the form of an integer and
+ returns an integer value.
+
+Even though, isalpha() takes integer as an argument, character is passed to
+ isalpha() function.
+
+
+Internally, the character is converted into the integer value corresponding
+ to its ASCII value when passed.
+
+isalpha() Return Value
+Return Value	Remarks
+Zero (0)	If the parameter isn't an alphabet.
+Non zero number	If the parameter is an alphabet.
+*/
+int	ft_isalpha(int ch)
 {
 	if (ft_isupper(ch) || ft_islower(ch))
 		return (1);
 	else
 		return (0);
 }
-
 /*
 #include <stdio.h>
 #include <unistd.h>
+#include <ctype.h>
 
 int	main(void)
 {
