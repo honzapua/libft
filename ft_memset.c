@@ -6,9 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:56:29 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/09 19:21:46 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:23:20 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 NAME
@@ -88,4 +90,13 @@ int	main(void)
 
 	return (0);
 }
+*/
+
+
+/*
+int i = memb * size;
+if ((memb * size) / size != memb)
+	return (malloc(0));
+
+
 */
