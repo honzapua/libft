@@ -6,9 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:57:49 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/09 18:50:00 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:20:59 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isupper(int ch)
 {

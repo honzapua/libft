@@ -6,10 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:56:29 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/13 18:23:20 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:54:32 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <sys/types.h>
 #include "libft.h"
 
 /*
@@ -52,6 +53,13 @@ n − This is the number of bytes to be set to the value.
 
 Return Value
 This function returns a pointer to the memory area str.
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	while (n > 0)
+		*((unsigned char *)s + (--n)) = (unsigned char)c;
+	return (s);
+}
 */
 void	*ft_memset(void *s, int c, size_t n)
 {

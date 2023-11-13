@@ -6,9 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:55:29 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/01 19:59:35 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:22:56 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 NAME

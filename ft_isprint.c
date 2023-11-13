@@ -6,9 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 16:17:28 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/09 19:17:08 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:22:50 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 C isprint()

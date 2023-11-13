@@ -1,4 +1,4 @@
-q/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
@@ -6,9 +6,11 @@ q/* ************************************************************************** *
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:34:03 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/31 15:35:24 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:22:43 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 isdigit()
@@ -17,9 +19,12 @@ checks for a digit (0 through 9).
 C isdigit()
 Function Prototype of isdigit()
 int isdigit( int arg );
-Function isdigit() takes a single argument in the form of an integer and returns the value of type int.
+Function isdigit() takes a single argument in the form of an integer and returns
+ the value of type int.
 
-Even though, isdigit() takes integer as an argument, character is passed to the function. Internally, the character is converted to its ASCII value for the check.
+Even though, isdigit() takes integer as an argument, character is passed to
+ the function. Internally, the character is converted to its ASCII value
+ for the check.
 
 It is defined in <ctype.h> header file.
 

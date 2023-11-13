@@ -6,9 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:55:20 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/09 18:55:41 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/11 22:17:21 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 // #include "ft_isalpha.c"	//not allowed in 42
 // #include "ft_isdigit.c"	//not allowed in 42

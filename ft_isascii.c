@@ -6,9 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:01:39 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/09 19:06:17 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:21:33 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 isascii()

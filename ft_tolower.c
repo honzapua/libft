@@ -6,9 +6,11 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 19:52:37 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/10/31 16:22:43 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:33:24 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 #include <ctype.h>
@@ -34,7 +36,7 @@ RETURN VALUE
 The value returned is that of the converted letter, or c if the conver‐
 sion was not possible.
 */
-#include "ft_isalpha.c" //not allowed in 42
+// #include "ft_isalpha.c" //not allowed in 42
 
 int	ft_tolower(int ch)
 {
@@ -42,7 +44,7 @@ int	ft_tolower(int ch)
 		return (ch + (97 - 65));
 	return (ch);
 }
-/*
+
 #include <stdio.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -62,4 +64,3 @@ int	main(void)
 
 	return (0);
 }
-*/
