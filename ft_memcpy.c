@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:55:29 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/16 18:10:55 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:14:05 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,7 @@ The memcpy() function returns a pointer to dest.
 ATTRIBUTES
 For an explanation of the terms used in this section, see attributes(7).
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t i;
 
-	if (!dst && !src)
-		return (0);
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dst);
-}
 */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
