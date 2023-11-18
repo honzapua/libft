@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:24:40 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/18 17:03:55 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/18 17:07:01 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ RETURN VALUESft_
      tination string will not be NUL-terminated (since there was no space for
      the NUL).  This keeps strlcat() from running off the end of a string.  In
      practice this should not happen (as it means that either size is incor‐
-     rect or that dst is not a prsize_t	strlcat(char *dst, const char *src, size_t size)
+     rect or that dst is not a 
+     prsize_t	strlcat(char *dst, const char *src, size_t size)
      The check exists to prevent potential security problems in incorrect code.
 
 EXAMPLES
