@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 19:52:37 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/13 18:33:24 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:40:45 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,21 @@ functions is undefined.
 RETURN VALUE
 The value returned is that of the converted letter, or c if the conver‐
 sion was not possible.
-*/
-// #include "ft_isalpha.c" //not allowed in 42
 
+int	ft_islower(int c)
+{
+	return ('a' <= c && c <= 'z');
+}
+
+// #include "ft_isalpha.c" //not allowed in 42
+*/
 int	ft_tolower(int ch)
 {
 	if (ft_isupper(ch))
 		return (ch + (97 - 65));
 	return (ch);
 }
-
+/*
 #include <stdio.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -64,3 +69,4 @@ int	main(void)
 
 	return (0);
 }
+*/

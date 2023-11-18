@@ -6,10 +6,9 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:39:35 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/16 19:03:31 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/18 17:01:37 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -30,6 +29,11 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+int	ft_toupper(int ch);
+int	ft_tolower(int ch);
+
+
+
 
 #endif
 // LIBFT_H MY_HEADER_FILE_H

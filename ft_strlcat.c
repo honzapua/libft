@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 18:43:19 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/18 16:45:57 by jsmidrka         ###   ########.fr       */
+/*   Created: 2023/11/17 17:24:40 by jsmidrka          #+#    #+#             */
+/*   Updated: 2023/11/18 17:03:55 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include <sys/types.h>
 #include "libft.h"
 
 /*
-SYNOPSIS
-     #include <string.h>
-     (See libbsd(7) for include usage.)
+NAME
+     strlcpy, strlcat — size-bounded string copying and concatenation
+
+LIBRARY
+     Utility functions from BSD systems (libbsd, -lbsd)
+
+SYNOPSIShe check exists to pre‐
+     vent potential security problems in incorrect code.de usage.)
 
      size_t
      strlcpy(char *dst, const char *src, size_t size);
@@ -43,7 +49,7 @@ DESCRIPTION
      of dst.  It will append at most size - strlen(dst) - 1 bytes, NUL-termi‐
      nating the result.
 
-RETURN VALUES
+RETURN VALUESft_
      The strlcpy() and strlcat() functions return the total length of the
      string they tried to create.  For strlcpy() that means the length of src.
      For strlcat() that means the initial length of dst plus the length of
@@ -55,50 +61,61 @@ RETURN VALUES
      tination string will not be NUL-terminated (since there was no space for
      the NUL).  This keeps strlcat() from running off the end of a string.  In
      practice this should not happen (as it means that either size is incor‐
-     rect or that dst is not a proper “C” string).  The check exists to pre‐
-     vent potential security problems in incorrect code.
-*/
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
+     rect or that dst is not a prsize_t	strlcat(char *dst, const char *src, size_t size)
+     The check exists to prevent potential security problems in incorrect code.
 
-	i = 0;
-	while (src[i] && i + 1 < size)
+EXAMPLES
+     The following code fragment illustrates the simple case:
+*/
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	length;
+
+	if ((dst == NULL && src == NULL) || size == 0)
+		return (0);
+	length = 0;
+	while (*dst && size > length)
 	{
-		dst[i] = src[i];
-		++i;
+		++dst;
+		++length;
 	}
-	if (size > 0)
-		dst[i] = '\0';
-	while (src[i])
-		++i;
-	return (i);
+	while (*src && size > length + 1)
+	{
+		*dst = *src;
+		++src;
+		++dst;
+		++length;
+	}
+	if (size > length)
+		*dst = '\0';
+	while (*src)
+	{
+		++length;
+		++src;
+	}
+	return (length);
 }
 /*
 #include <stdio.h>
 #include <string.h>
 
-void test(int size)
-{
-	char	string[] = "Hello there, Venus";
-	char	buffer[19];
-	int	r;
-
-	r = ft_strlcpy(buffer, string, size);
-
-	printf("Copied '%s' into '%s', length %d\n",
-		string,
-		buffer,
-		r
-		);
-}
-
 int	main(void)
 {
-	test(19);
-	test(10);
-	test(1);
-	test(0);
+	char	first[] = "This is ";
+	char	last[] = "a potentially long string";
+	int	r;
+	int	size = 16;
+	char buffer[size];
+
+	ft_strcpy(buffer, first);
+	r = ft_strlcat(buffer, last, size);
+
+	puts(buffer);
+	printf("Value returned: %d\n",r);
+	if (r > size)
+		puts("String truncated");
+	else
+		puts("String was fully copied");
 
 	return (0);
 }
