@@ -6,13 +6,15 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:34:03 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/13 18:22:43 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:43:51 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
+int isdigit(int c);
+
 isdigit()
 checks for a digit (0 through 9).
 
@@ -33,14 +35,13 @@ Return Value	Remarks
 Non-zero integer ( x > 0 )	Argument is a numeric character.
 Zero (0)	Argument is not a numeric character.
 */
-int	ft_isdigit(char d)
+int	ft_isdigit(int c)
 {
-	if (d >= '0' && d <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
 }
-
 /*
 #include <stdio.h>
 #include <unistd.h>
@@ -50,10 +51,12 @@ int	main(void)
 	char c;
 	
 	c='5';
-	printf("Result when numeric character is passed %c: %d ", c, ft_isdigit(c));
+	printf("Result when numeric character is passed %c:
+	 %d ", c, ft_isdigit(c));
 
 	c='+';
-	printf("\nResult when non-numeric character is passed %c: %d \n", c, ft_isdigit(c));
+	printf("\nResult when non-numeric character is passed %c:
+	 %d \n", c, ft_isdigit(c));
 
 	//next example
 

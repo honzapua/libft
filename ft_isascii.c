@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:01:39 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/13 18:21:33 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:28:44 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,4 @@ int	main(void)
 		printf("%c is an ascii character.", c);
 	return (0);
 }
-*//
+*/

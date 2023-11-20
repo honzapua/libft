@@ -6,11 +6,16 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 19:52:37 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/18 16:40:45 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:22:36 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isupper(int c)
+{
+	return ('A' <= c && c <= 'Z');
+}
 
 /*
 #include <ctype.h>
@@ -36,10 +41,6 @@ RETURN VALUE
 The value returned is that of the converted letter, or c if the conver‐
 sion was not possible.
 
-int	ft_islower(int c)
-{
-	return ('a' <= c && c <= 'z');
-}
 
 // #include "ft_isalpha.c" //not allowed in 42
 */
