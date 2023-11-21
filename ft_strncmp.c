@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:09:54 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/20 22:06:46 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:27:40 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ or  greater  than zero  if  s1 (or the first n bytes thereof) is found,
 respectively, to be less than, to match,
 or be greater than s2.
 
+more effective version
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
