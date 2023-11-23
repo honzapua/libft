@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 20:22:54 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/20 22:48:34 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/23 18:08:01 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ running total. Loop ends when reach string terminator '\0'
 2nd while sign resolve
 3rd composing number
 */
-int	ft_atoi(char *str)
+int	ft_atoi(char	*str)
 {
 	int	i;
 	int	sign;
@@ -46,7 +46,6 @@ int	ft_atoi(char *str)
 	sign = 1;
 	nbr = 0;
 	i = 0;
-
 	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
 		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 	{
@@ -74,14 +73,13 @@ int	main(void)
 {
 	char	str[] = "+-+-4faljf";
 	int	val = ft_atoi(str);
-	
-	
+
 	printf("to parse:  %s\n", str);
 	printf("get number: %d\n", val);
-	
+
 	char	*str2;
 	str2 = "   ---+--+1234ab567";
-	
+
 	printf("to parse:  %s\n", str2);
 	printf("get number: %d\n", ft_atoi(str2));
 	return (0);
