@@ -6,9 +6,12 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:30:47 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/22 20:13:12 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:28:21 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
+#include "libft.h"
 
 /*
 NAME
@@ -72,23 +75,6 @@ This function returns a pointer to the first occurrence in haystack of any
 ** are searched.  Characters that appear after a `\0' character are not
 ** searched. Since the strnstr() function is a FreeBSD specific API, it
 ** should only be used when portability is not a concern.
-*/
-char	*strnstr(const char *big, const char *little, size_t len)
-{
-	unsigned long	i;
-	unsigned long	j;
-	i = 0;
-	while (big[i])
-	{
-		j = 0;
-		while (little[j] == big[i] && big[i] && i < len) 
-		{
-			++i;
-			++j;
-		}
-	
-	}
-}
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -113,24 +99,25 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+*/
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (!*to_find)
-		return ((char *)str);
+	if (!*little)
+		return ((char *)big);
 	i = 0;
-	while (str[i] && (size_t)i < len)
+	while (big[i] && (size_t)i < len)
 	{
-		if (str[i] == to_find[0])
+		if (big[i] == little[0])
 		{
 			j = 0;
-			while (str[i + j] == to_find[j] && i + j < len)
+			while (big[i + j] == little[j] && i + j < len)
 			{
-				if (to_find[j + 1] == '\0')
-					return ((char *)&str[i]);
+				if (little[j + 1] == '\0')
+					return ((char *)&big[i]);
 				j++;
 			}
 		}
@@ -138,5 +125,20 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (0);
 }
+/*
+#include <stdio.h>
+#include <string.h>
 
-	
+int	main(void)
+{
+	const char haystack[20] = "TutorialsPoint";
+	const char needle[10] = "Point";
+	char *ret;
+
+	ret = ft_strnstr(haystack, needle, 16);
+
+	printf("The substring is: %s\n", ret);
+
+	return (0);
+}
+*/
