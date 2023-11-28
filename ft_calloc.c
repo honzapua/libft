@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:27:37 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/26 19:31:54 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/28 16:57:13 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,18 +116,18 @@ void	*ft_memset(void *s, int c, size_t n)
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	total_bytes;
+	size_t	all_bytes;
 	void	*res;
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
-	total_bytes = nmemb * size;
-	if (total_bytes / size != nmemb)
+	all_bytes = nmemb * size;
+	if (all_bytes / size != nmemb)
 		return (NULL);
-	res = malloc(total_bytes);
+	res = malloc(all_bytes);
 	if (res == NULL)
 		return (NULL);
-	ft_memset(res, 0, total_bytes);
+	ft_memset(res, 0, all_bytes);
 	return (res);
 }
 /*
