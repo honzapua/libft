@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:39:35 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/23 18:53:34 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/28 20:08:10 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 int	ft_atoi(char *str);
 
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
 // LIBFT_H MY_HEADER_FILE_H

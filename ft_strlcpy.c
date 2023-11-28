@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 18:43:19 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/18 16:45:57 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/28 19:39:15 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		++i;
 	return (i);
 }
+
 /*
 #include <stdio.h>
 #include <string.h>
