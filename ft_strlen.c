@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:09:08 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/28 19:48:05 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/29 18:49:28 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,25 +34,21 @@ https://opensource.apple.com/source/Libc/Libc-262/i386/gen/strlen.c.auto.html
 
 size_t	ft_strlen(const char *str)
 {
-	const char	*ptr = str;
+	long int	chr;
 
-	while (*ptr != '\0')
-	{
-		ptr++;
-	}
-	return (ptr - str);
+	chr = 0;
+	while (str[chr] != '\0')
+		++chr;
+	return (chr);
 }
 */
 size_t	ft_strlen(const char *str)
 {
-	long int	i;
+	const char	*ptr_chr = str;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		++i;
-	}
-	return (i);
+	while (*ptr_chr != '\0')
+		ptr_chr++;
+	return (ptr_chr - str);
 }
 /*
 #include <stdio.h>

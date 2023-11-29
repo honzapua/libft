@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 17:01:38 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/28 20:06:36 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/29 19:22:07 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,29 +104,26 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 size_t	ft_strlen(const char *str)
 {
-	const char	*ptr = str;
+	const char	*ptr_chr = str;
 
-	while (*ptr != '\0')
-	{
-		ptr++;
-	}
-	return (ptr - str);
+	while (*ptr_chr != '\0')
+		ptr_chr++;
+	return (ptr_chr - str);
 }
 
-// if (dest == NULL) if malloc fails
+// if (dest == NULL) then malloc fails
 char	*ft_strdup(const char *s)
 {
 	char	*dest;
-	size_t	s_len;
+	size_t	strlen;
 
-	s_len = ft_strlen(s);
-	dest = malloc((s_len + 1) * sizeof(char));
+	strlen = ft_strlen(s);
+	dest = malloc((strlen + 1) * sizeof(char));
 	if (dest)
-		ft_strlcpy(dest, s, s_len + 1);
+		ft_strlcpy(dest, s, (strlen + 1));
 	return (dest);
 }
 /*
-
 // C program to copy the string
 // using strdup function
 #include <stdio.h>

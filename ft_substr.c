@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 20:07:05 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/28 22:57:18 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/11/29 18:50:50 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,11 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 size_t	ft_strlen(const char *str)
 {
-	long int	i;
+	const char	*ptr_chr = str;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		++i;
-	}
-	return (i);
+	while (*ptr_chr != '\0')
+		ptr_chr++;
+	return (ptr_chr - str);
 }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
