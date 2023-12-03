@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 17:51:12 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/30 19:14:39 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:19:50 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,17 @@ size_t	ft_strlen(const char *str)
 	return (ptr_chr - str);
 }
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*result;
-
-	result = NULL;
 	while (*s)
 	{
 		if (*s == (char)c)
-			result = (char *)s;
+			return ((char *)s);
 		++s;
 	}
 	if (c == '\0')
 		return ((char *)s);
-	return (result);
+	return (NULL);
 }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
@@ -105,25 +102,6 @@ Allocates (with malloc(3)) and returns a copy of
 ’s1’ with the characters specified in ’set’ removed
 from the beginning and the end of the string.
 */
-// char	*ft_strtrim(char const *s1, char const *set)
-// {
-// 	int	i;
-// 	size_t	lens1;
-// 	size_t	lenset;
-// 	char *	trimed;
-// 	int 	i1;
-// 	int 	i2;
-
-// 	lens1 =	ft_strlen(s1);
-// 	lenset = ft_strlen(set);
-
-// 	while (*s1++ != '\0' )
-// 	{
-// 		while (*s1 == *set++)
-// 			i1++;		
-// 	}
-// 	return(
-// }
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	size;
@@ -145,7 +123,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 #include <stdio.h>
 #include <stdlib.h>
 
-// Place the definitions of ft_strlen, ft_strrchr, ft_strlcpy, and ft_strtrim here
+// Place the definitions of ft_strlen, ft_strrchr, ft_strlcpy,
+// and ft_strtrim here
 
 int	main(void)
 {
@@ -156,7 +135,7 @@ int	main(void)
 
 	// Test ft_strrchr
 	const char *search_char = "l";
-	char *last_occurrence = ft_strrchr(str, *search_char);
+	char *last_occurrence = ft_strchr(str, *search_char);
 	printf("Last occurrence of '%s' in \"%s\": %s\n", search_char, str, last_occurrence);
 
 	// Test ft_strlcpy
@@ -165,8 +144,8 @@ int	main(void)
 	printf("Copied \"%s\" to dest with length %zu: %s\n", str, copied_len, dest);
 
 	// Test ft_strtrim
-	const char *original_str = "   Hello, World!   ";
-	const char *set_to_trim = " ";
+	const char *original_str = "xxxHello, World!xx";
+	const char *set_to_trim = "x";
 	char *trimmed_str = ft_strtrim(original_str, set_to_trim);
 	printf("Original String: \"%s\"\n", original_str);
 	printf("Trimmed String: \"%s\"\n", trimmed_str);
