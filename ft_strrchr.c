@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:28:56 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/18 17:37:06 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:19:49 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,6 @@ DESCRIPTION
 
        Here "character" means "byte"; these functions do not work with wide
        or multibyte characters.#include <stddef.h>
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
-{
-	char	*result;
-
-	result = NULL;
-	while (*s)
-	{
-		if (*s == (char)c)
-			result = (char *)s;
-		++s;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (result);
-}
 
 RETURN VALUE
        The strchr() and strrchr() functions return a pointer to the matched

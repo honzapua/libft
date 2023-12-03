@@ -6,50 +6,50 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 21:43:01 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/30 18:05:21 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/03 16:26:01 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	const char	*ptr_chr = str;
+// size_t	ft_strlen(const char *str)
+// {
+// 	const char	*ptr_chr = str;
 
-	while (*ptr_chr != '\0')
-		ptr_chr++;
-	return (ptr_chr - str);
-}
+// 	while (*ptr_chr != '\0')
+// 		ptr_chr++;
+// 	return (ptr_chr - str);
+// }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	length;
+// size_t	ft_strlcat(char *dst, const char *src, size_t size)
+// {
+// 	size_t	length;
 
-	if ((dst == NULL && src == NULL) || size == 0)
-		return (0);
-	length = 0;
-	while (*dst && size > length)
-	{
-		++dst;
-		++length;
-	}
-	while (*src && size > length + 1)
-	{
-		*dst = *src;
-		++src;
-		++dst;
-		++length;
-	}
-	if (size > length)
-		*dst = '\0';
-	while (*src)
-	{
-		++length;
-		++src;
-	}
-	return (length);
-}
+// 	if ((dst == NULL && src == NULL) || size == 0)
+// 		return (0);
+// 	length = 0;
+// 	while (*dst && size > length)
+// 	{
+// 		++dst;
+// 		++length;
+// 	}
+// 	while (*src && size > length + 1)
+// 	{
+// 		*dst = *src;
+// 		++src;
+// 		++dst;
+// 		++length;
+// 	}
+// 	if (size > length)
+// 		*dst = '\0';
+// 	while (*src)
+// 	{
+// 		++length;
+// 		++src;
+// 	}
+// 	return (length);
+// }
 
 /*
 Prototype: 

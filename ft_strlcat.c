@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:24:40 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/18 17:07:01 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/03 19:04:23 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ DESCRIPTION
      of dst.  It will append at most size - strlen(dst) - 1 bytes, NUL-termi‐
      nating the result.
 
-RETURN VALUESft_
+RETURN VALUES
      The strlcpy() and strlcat() functions return the total length of the
      string they tried to create.  For strlcpy() that means the length of src.
      For strlcat() that means the initial length of dst plus the length of
@@ -67,7 +67,20 @@ RETURN VALUESft_
 
 EXAMPLES
      The following code fragment illustrates the simple case:
-*/
+*/char	**ft_split(char const *s, char c)
+// {
+// 	int	slen;
+// 	int	*count;
+// 	int	i;
+
+// 	slen = ft_strlen(*s);
+// 	*count = 0;
+// 	i = 0;
+// 	while (i < len)
+// 	{
+		
+// 	}
+// }
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	length;

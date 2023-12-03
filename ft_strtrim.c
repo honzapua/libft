@@ -6,78 +6,78 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 17:51:12 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/03 15:19:50 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/03 16:33:11 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	const char	*ptr_chr = str;
+// size_t	ft_strlen(const char *str)
+// {
+// 	const char	*ptr_chr = str;
 
-	while (*ptr_chr != '\0')
-		ptr_chr++;
-	return (ptr_chr - str);
-}
+// 	while (*ptr_chr != '\0')
+// 		ptr_chr++;
+// 	return (ptr_chr - str);
+// }
 
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		++s;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
-}
+// char	*ft_strchr(const char *s, int c)
+// {
+// 	while (*s)
+// 	{
+// 		if (*s == (char)c)
+// 			return ((char *)s);
+// 		++s;
+// 	}
+// 	if (c == '\0')
+// 		return ((char *)s);
+// 	return (NULL);
+// }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
+// size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+// {
+// 	size_t	i;
 
-	i = 0;
-	while (src[i] && i + 1 < size)
-	{
-		dst[i] = src[i];
-		++i;
-	}
-	if (size > 0)
-		dst[i] = '\0';
-	while (src[i])
-		++i;
-	return (i);
-}
+// 	i = 0;
+// 	while (src[i] && i + 1 < size)
+// 	{
+// 		dst[i] = src[i];
+// 		++i;
+// 	}
+// 	if (size > 0)
+// 		dst[i] = '\0';
+// 	while (src[i])
+// 		++i;
+// 	return (i);
+// }
 
-static size_t	get_size(const char *s1, const char *set)
-{
-	size_t	begin;
-	size_t	end;
-	size_t	all;
+// static size_t	get_size(const char *s1, const char *set)
+// {
+// 	size_t	begin;
+// 	size_t	end;
+// 	size_t	all;
 
-	all = ft_strlen(s1);
-	begin = 0;
-	end = 0;
-	while (ft_strchr(set, *s1) && *s1)
-	{
-		++s1;
-		++begin;
-	}
-	if (*s1 == '\0')
-		return (1);
-	while (*s1)
-		++s1;
-	--s1;
-	while (ft_strchr(set, *s1))
-	{
-		--s1;
-		++end;
-	}
-	return (all - begin - end + 1);
-}
+// 	all = ft_strlen(s1);
+// 	begin = 0;
+// 	end = 0;
+// 	while (ft_strchr(set, *s1) && *s1)
+// 	{
+// 		++s1;
+// 		++begin;
+// 	}
+// 	if (*s1 == '\0')
+// 		return (1);
+// 	while (*s1)
+// 		++s1;
+// 	--s1;
+// 	while (ft_strchr(set, *s1))
+// 	{
+// 		--s1;
+// 		++end;
+// 	}
+// 	return (all - begin - end + 1);
+// }
 
 /*
 Function name:
