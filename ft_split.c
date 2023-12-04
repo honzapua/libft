@@ -6,13 +6,14 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 19:10:34 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/03 19:36:32 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/04 18:50:30 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
+/*
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -29,19 +30,31 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		++i;
 	return (i);
 }
+*/
 
-static void	free_str_array(char **arr)
+/*
+function is a utility function to free the memory allocated for a
+ dynamically allocated array of strings. It iterates through the array
+ of strings and frees each string and then frees the array itself.
+*/
+static void	free_str_array(char **str_array)
 {
 	size_t	i;
 
 	i = 0;
-	while (arr[i] != NULL)
-		free(arr[i++]);
-	free(arr);
+	while (str_array[i] != NULL)
+		free(str_array[i++]);
+	free(str_array);
 	return ;
 }
 
 // Returns 0 when terminating null is encountered, otherwise returns true.
+/*
+function is used to move the pointer s to the beginning of the next word
+in the string, where a word is defined by the character c being the delimiter.
+It returns 0 when the terminating null character is encountered, otherwise,
+ it returns true.
+*/
 static int	to_next_word(const char **s, char c)
 {
 	while (**s && **s == c)
@@ -49,7 +62,12 @@ static int	to_next_word(const char **s, char c)
 	return (**s);
 }
 
-static int	word_count(const char *s, char c)
+/*
+function counts the number of words in the input string s based on
+ the delimiter c. It skips leading delimiters, increments the count for
+ each word encountered, and continues until the end of the string.
+*/
+static int	count_words(const char *s, char c)
 {
 	int	count;
 
@@ -70,7 +88,11 @@ static int	word_count(const char *s, char c)
 	return (count);
 }
 
-static size_t	strlen_to_char(const char *s, char c)
+/*
+function calculates the length of a substring in the input string 
+s until it encounters the delimiter c or the end of the string.
+*/
+static size_t	strlen_to_delimiter(const char *s, char c)
 {
 	size_t	len;
 
@@ -106,32 +128,32 @@ with a NULL pointer.
 */
 char	**ft_split(const char *s, char c)
 {
-	char		**res;
+	char		**result;
 	size_t		size;
 	size_t		i;
 
-	res = malloc((word_count(s, c) + 1) * sizeof(char *));
-	if (res == NULL || s == NULL)
-		return (res);
+	result = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (result == NULL || s == NULL)
+		return (result);
 	i = 0;
 	while (*s)
 	{
 		if (!to_next_word(&s, c))
 			break ;
-		size = (strlen_to_char(s, c) + 1);
-		res[i] = malloc(size * sizeof(char));
-		if (res[i] == NULL)
+		size = (strlen_to_delimiter(s, c) + 1);
+		result[i] = malloc(size * sizeof(char));
+		if (result[i] == NULL)
 		{
-			free_str_array(res);
+			free_str_array(result);
 			return (NULL);
 		}
-		ft_strlcpy(res[i++], s, size);
+		ft_strlcpy(result[i++], s, size);
 		s += size - 1;
 	}
-	res[i] = NULL;
-	return (res);
+	result[i] = NULL;
+	return (result);
 }
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -186,5 +208,6 @@ int main() {
     free_str_array(result5);
     printf("\n");
 
-    return 0;
+    return (0);
 }
+*/
