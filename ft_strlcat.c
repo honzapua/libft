@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:24:40 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/03 19:04:23 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:03:29 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,20 +67,7 @@ RETURN VALUES
 
 EXAMPLES
      The following code fragment illustrates the simple case:
-*/char	**ft_split(char const *s, char c)
-// {
-// 	int	slen;
-// 	int	*count;
-// 	int	i;
-
-// 	slen = ft_strlen(*s);
-// 	*count = 0;
-// 	i = 0;
-// 	while (i < len)
-// 	{
-		
-// 	}
-// }
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	length;

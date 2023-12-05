@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:56:29 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/15 15:08:25 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:08:25 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,13 +98,4 @@ int	main(void)
 
 	return (0);
 }
-*/
-
-
-/*
-int i = memb * size;
-if ((memb * size) / size != memb)
-	return (malloc(0));
-
-
 */

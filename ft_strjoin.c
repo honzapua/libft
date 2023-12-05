@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 21:43:01 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/03 16:26:01 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:59:48 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,18 +82,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-
 	strlen = ft_strlen(s1) + ft_strlen(s2) + 1;
 	joinstr = (char *)malloc (strlen * sizeof(char));
-
 	if (joinstr == NULL)
 		return (NULL);
-
 	ft_strlcat(joinstr, s1, strlen);
 	ft_strlcat(joinstr, s2, strlen);
-
 	return (joinstr);
 }
+
 /*
 #include <stdio.h>
 

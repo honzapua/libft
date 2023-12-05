@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 17:51:12 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/03 16:33:11 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:07:32 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,12 +136,14 @@ int	main(void)
 	// Test ft_strrchr
 	const char *search_char = "l";
 	char *last_occurrence = ft_strchr(str, *search_char);
-	printf("Last occurrence of '%s' in \"%s\": %s\n", search_char, str, last_occurrence);
+	printf("Last occurrence of '%s' in \"%s\": %s\n", search_char,
+	 str, last_occurrence);
 
 	// Test ft_strlcpy
 	char dest[20];
 	size_t copied_len = ft_strlcpy(dest, str, sizeof(dest));
-	printf("Copied \"%s\" to dest with length %zu: %s\n", str, copied_len, dest);
+	printf("Copied \"%s\" to dest with length %zu: %s\n", str, copied_len,
+	 dest);
 
 	// Test ft_strtrim
 	const char *original_str = "xxxHello, World!xx";
