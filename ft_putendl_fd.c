@@ -1,3 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/07 16:56:50 by jsmidrka          #+#    #+#             */
+/*   Updated: 2023/12/07 17:22:16 by jsmidrka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+#include "libft.h"
+
+// size_t	ft_strlen(const char *str)
+// {
+// 	const char	*ptr_chr = str;
+
+// 	while (*ptr_chr != '\0')
+// 		ptr_chr++;
+// 	return (ptr_chr - str);
+// }
+
 /*
 Function name:
 ft_putendl_fd
@@ -18,4 +42,24 @@ write
 Description:
 Outputs the string ’s’ to the given file descriptor
 followed by a newline.
+*/
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (s != NULL)
+	{
+		write(fd, s, ft_strlen(s));
+		write(fd, "\n", 1);
+	}
+	return ;
+}
+
+/*
+int	main(void)
+{
+	char	*s;
+
+	s = "Hello World!";
+	ft_putendl_fd(s, 1);
+	return (0);
+}
 */
