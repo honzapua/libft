@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:09:54 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/08 16:59:02 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 18:41:53 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,32 +48,27 @@ respectively, to be less than, to match,
 or be greater than s2.
 
 more effective version
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+    size_t i;
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i] && i + 1 < n)
-		++i;
-	if (n > 0)
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	else
-		return (0);
-}
+    // Initialize the index variable i to 0
+    i = 0;
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t	i;
+    // Iterate through the strings while the characters are equal,
+    // and both strings are not null-terminated, and the maximum
+    // number of characters (n) is not reached.
+    while (s1[i] == s2[i] && s1[i] && s2[i] && i + 1 < n)
+        ++i;
 
-	i = n;
-	while (i > 0)
-	{
-		if (s1[i] == s2[i])
-			--i;
-		else
-			return ((unsigned int)(s1[i]) - (unsigned int)(s2[i]));
-	}
-	return (0);
+    // If n > 0, return the difference between the current characters
+    // at index i (cast to unsigned char for proper handling of
+    // signed char values).
+    if (n > 0)
+        return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    else
+        // If n is 0, the strings are considered equal.
+        return (0);
 }
 */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

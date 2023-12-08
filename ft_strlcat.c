@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:24:40 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/08 18:03:34 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 20:08:37 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,46 @@ RETURN VALUES
 
 EXAMPLES
      The following code fragment illustrates the simple case:
+
+size_t ft_strlcat(char *dst, const char *src, size_t size)
+{
+size_t length;
+
+// Check for invalid input: both src and dst are NULL, or size is 0.
+if ((dst == NULL && src == NULL) || size == 0)
+	return (0);
+
+// Find the length of the destination string (dst) or until size is reached.
+length = 0;
+while (*dst && size > length)
+{
+	++dst;
+	++length;
+}
+
+//Append characters from src to dst until size - 1 or a null character in src.
+while (*src && size > length + 1)
+{
+	*dst = *src;
+	++src;
+	++dst;
+	++length;
+}
+
+// Null-terminate the result if there is space in the destination buffer.
+if (size > length)
+	*dst = '\0';
+
+// Continue reading characters in src to find its total length.
+while (*src)
+{
+	++length;
+	++src;
+}
+
+// Return the total length of the concatenated string.
+return (length);
+}
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

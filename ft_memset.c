@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:56:29 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/08 16:50:24 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 18:45:03 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,27 +54,18 @@ n − This is the number of bytes to be set to the value.
 Return Value
 This function returns a pointer to the memory area str.
 
-void	*ft_memset(void *s, int c, size_t n)
+void *ft_memset(void *s, int c, size_t n)
 {
-	while (n > 0)
-		*((unsigned char *)s + (--n)) = (unsigned char)c;
-	return (s);
-}
-not passed test
-void	*ft_memset(void *s, int c, size_t n)
-{
-	size_t	i;
-	char	*pos;
+    // While there are still bytes to set (n > 0)
+    while (n > 0)
+	// Set the byte at the current position to the specified value (c),
+	// and then decrement the position (move to the previous byte).
+	*((unsigned char *)s + (--n)) = (unsigned char)c;
 
-	i = 0;
-	pos = (char *)s;
-	while (i <= n)
-	{
-		pos[i] = c;
-		i++;
-	}
-	return (pos);
+    // Return the original pointer to the memory block.
+    return (s);
 }
+
 */
 void	*ft_memset(void *s, int c, size_t n)
 {
