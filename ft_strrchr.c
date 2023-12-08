@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:28:56 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/03 17:19:49 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:14:08 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ SYNOPSIS
 DESCRIPTION
        The  strchr()  function  returns  a  pointer to the first occurrence 
        of the character c in the string s.
-
+VS
        The strrchr() function returns a pointer to the last occurrence of
        the  character  c  in  the string s.
 
