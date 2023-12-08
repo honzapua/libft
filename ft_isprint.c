@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 16:17:28 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/13 18:22:50 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 17:25:34 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,18 @@ db/clib/isprint.c.auto.html
 // {
 // 	return ((ch >= ' ' && ch <= '~') ? 1 : 0);
 // }
+
+OR
+
+// int	ft_isprint(int c)
+// {
+// 	return (0x20 <= c && c <= 0x7E);
+// }
+
 */
 int	ft_isprint(int ch)
 {
-	if (ch >= 20 && ch <= 126)
+	if (ch >= 32 && ch <= 126)
 		return (ch);
 	else
 		return (0);
@@ -66,15 +74,15 @@ int	main(void)
 	int	c;
 
 	c = 'Q';
-	printf("Result when a printable character %c is passed to
-	 isprint(): %d", c, ft_isprint(c));
+	printf("Result when a printable character %c is passed to"
+	 "isprint(): %d", c, ft_isprint(c));
 	c = '\n';
-	printf("\nResult when a control character %c is passed to isprint(): 
-	%d \n", c, ft_isprint(c));
+	printf("\nResult when a control character %c is passed to isprint(): "
+	"%d \n", c, ft_isprint(c));
 
 // for loop to List all Printable Characters Using isprint() function.
 	for(c = 1; c <= 127; ++c)
-		if (ft_isprint(c)!= 0)
+		if (ft_isprint(c) != 0)
 			printf("%c ", c);
 	return (0);
 }

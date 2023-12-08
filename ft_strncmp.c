@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:09:54 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/20 22:27:40 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:59:02 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	else
 		return (0);
 }
-*/
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -75,6 +75,20 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+*/
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i] && i + 1 < n)
+		++i;
+	if (n > 0)
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	else
+		return (0);
+}
+
 /*
 #include <stdio.h>
 #include <string.h>

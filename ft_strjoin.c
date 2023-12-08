@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 21:43:01 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/05 18:59:48 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:47:26 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ strlen = ft_strlen(s1) + ft_strlen(s2) + 1;
 */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*joinstr;
 	size_t	strlen;
+	char	*joinstr;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -86,10 +86,31 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joinstr = (char *)malloc (strlen * sizeof(char));
 	if (joinstr == NULL)
 		return (NULL);
+	joinstr[0] = '\0';
 	ft_strlcat(joinstr, s1, strlen);
 	ft_strlcat(joinstr, s2, strlen);
 	return (joinstr);
 }
+
+// #include <stdlib.h>
+// #include "libft.h"
+
+// char	*ft_strjoin(const char *s1, const char *s2)
+// {
+// 	char	*res;
+// 	size_t	size;
+
+// 	if (s1 == NULL || s2 == NULL)
+// 		return (NULL);
+// 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+// 	res = malloc(size * sizeof(char));
+// 	if (res == NULL)
+// 		return (res);
+// 	res[0] = '\0';
+// 	ft_strlcat(res, s1, size);
+// 	ft_strlcat(res, s2, size);
+// 	return (res);
+// }
 
 /*
 #include <stdio.h>

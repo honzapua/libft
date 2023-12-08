@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:24:40 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/05 19:03:29 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 18:03:34 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (*src && size > length + 1)
 	{
 		*dst = *src;
-		++src;
 		++dst;
 		++length;
+		++src;
 	}
 	if (size > length)
 		*dst = '\0';
@@ -96,6 +96,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (length);
 }
+
 /*
 #include <stdio.h>
 #include <string.h>

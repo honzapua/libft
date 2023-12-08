@@ -6,12 +6,19 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:27:37 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/28 16:57:13 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 18:00:22 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// for malloc
 #include "libft.h"
+
+// void	*ft_memset(void *s, int c, size_t n)
+// {
+// 	while (n > 0)
+// 		*((unsigned char *)s + (--n)) = (unsigned char)c;
+// 	return (s);
+// }
 
 /*
 NAME
@@ -99,21 +106,6 @@ with the size of the float.
 		return (NULL);
 	}
 */
-void	*ft_memset(void *s, int c, size_t n)
-{
-	size_t	i;
-	char	*pos;
-
-	i = 0;
-	pos = (char *)s;
-	while (i <= n)
-	{
-		pos[i] = c;
-		i++;
-	}
-	return (pos);
-}
-
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	all_bytes;

@@ -6,12 +6,40 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 17:01:38 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/11/29 19:22:07 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/08 17:50:10 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// for the malloc()
 #include "libft.h"
+
+/*
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i] && i + 1 < size)
+	{
+		dst[i] = src[i];
+		++i;
+	}
+	if (size > 0)
+		dst[i] = '\0';
+	while (src[i])
+		++i;
+	return (i);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	const char	*ptr_chr = str;
+
+	while (*ptr_chr != '\0')
+		ptr_chr++;
+	return (ptr_chr - str);
+}
+*/
 
 /*
 NAME
@@ -85,31 +113,6 @@ char	*ft_strdup(const char *s)
 	return (d);
 }
 */
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i] && i + 1 < size)
-	{
-		dst[i] = src[i];
-		++i;
-	}
-	if (size > 0)
-		dst[i] = '\0';
-	while (src[i])
-		++i;
-	return (i);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	const char	*ptr_chr = str;
-
-	while (*ptr_chr != '\0')
-		ptr_chr++;
-	return (ptr_chr - str);
-}
 
 // if (dest == NULL) then malloc fails
 char	*ft_strdup(const char *s)
