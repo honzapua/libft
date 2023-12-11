@@ -1,2 +1,0 @@
-#!/bin/bash
-cc -Wall -Wextra -Werror "./ft_$1.c" && ./a.out
