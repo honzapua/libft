@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:27:37 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/08 18:00:22 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/13 19:30:22 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,11 @@ with the size of the float.
 		errno = ENOMEM;
 		return (NULL);
 	}
+
+
+// Better than return NULL
+if (nmemb == 0 || size == 0)
+		return (malloc(0));
 */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
