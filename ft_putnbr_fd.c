@@ -6,7 +6,7 @@
 /*   By: jsmidrka <jsmidrka@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:23:21 by jsmidrka          #+#    #+#             */
-/*   Updated: 2023/12/07 18:23:41 by jsmidrka         ###   ########.fr       */
+/*   Updated: 2023/12/13 18:29:51 by jsmidrka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	digit;
 
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
 	if (n < 0)
 	{
 		write(fd, "-", 1);
